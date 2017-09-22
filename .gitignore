@@ -1,0 +1,18 @@
+# dotfiles
+.DS_Store
+
+# ignore files/folders
+node_modules
+www/*.css
+www/*.eot
+www/*.js
+www/*.map
+www/*.svg
+www/*.ttf
+www/*.woff
+www/*.woff2
+
+# logs
+npm-debug.log
+yarn-error.log
+/coverage

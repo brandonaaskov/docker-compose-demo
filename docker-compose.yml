@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  web:
+    container_name: web
+    build: ./web/
+    env_file: ./web/.env
+    ports:
+      - 3737:3737
+    links:
+      - server
+    volumes:
+      - ./web/src:/code/src
+    command: yarn start
+  server:
+    container_name: api
+    build: ./api/
+    ports:
+      - 3000:3000
+    links:
+      - db
+    volumes:
+      - ./api/src:/code/src
+    command: yarn start
+  db:
+    image: mongo:latest
+    container_name: mongo
+    volumes:
+      - /data/db:/data/db
+    ports:
+      - 27017:27017

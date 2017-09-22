@@ -1,0 +1,14 @@
+# dotfiles
+.DS_Store
+.env
+.git
+
+# ignore files/folders
+node_modules
+www/*.js
+www/*.map
+
+# logs
+npm-debug.log
+yarn-error.log
+/coverage
